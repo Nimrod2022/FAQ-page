@@ -1,0 +1,23 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+        .attribution a { color: hsl(228, 45%, 44%); }
+        /* Additional styles for background image */
+        .bg-custom::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 28%; /* Adjust the height as needed */
+            background-image: url('./assets/images/background-pattern-desktop.svg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
