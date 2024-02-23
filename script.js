@@ -1,5 +1,4 @@
 "use strict";
-
 // Exand minimize image src
 
 const expandImage = "./assets/images/icon-plus.svg";
@@ -19,3 +18,4 @@ toggleElements.forEach((toggle) => {
     content.classList.toggle("hidden");
   });
 });
+
