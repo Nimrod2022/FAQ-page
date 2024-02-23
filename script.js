@@ -1,25 +1,21 @@
 "use strict";
+// Exand minimize image src
 
-const expandButton = document.getElementById("expand");
-const buttonImage = expandButton.querySelector("img");
-const questionsClick = document.getElementById("question");
-const minimizeButtonImage = "./assets/images/icon-minus.svg";
-const expandButtonImage = "./assets/images/icon-plus.svg";
+const expandImage = "./assets/images/icon-plus.svg";
+const minimizeImage = "./assets/images/icon-minus.svg";
 
-let clicked = false;
+// All clickable elements for toggling
+const toggleElements = document.querySelectorAll(".expand > img, .expand > h5");
 
+toggleElements.forEach((toggle) => {
+  toggle.addEventListener("click", function () {
 
-function handleClicks(clickElementId) {
-  clickElementId.addEventListener("click", function () {
-    if (clicked) {
-      buttonImage.src = expandButtonImage;
-      clicked = false;
-    } else {
-      buttonImage.src = minimizeButtonImage;
-      clicked = true;
-    }
+    const content = toggle.parentNode.nextElementSibling;
+    // Ccheck hidden status
+    const isShown = !content.classList.contains("hidden");
+    // change toggle image
+    toggle.src = isShown ? expandImage : minimizeImage;
+    content.classList.toggle("hidden");
   });
-}
+});
 
-handleClicks(expandButton);
-handleClicks(questionsClick);
