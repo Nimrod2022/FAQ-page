@@ -17,7 +17,7 @@ Users are able to:
 ### Links
 
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://nimrod2022.github.io/FAQ-page/)
 
 ## My process
 
